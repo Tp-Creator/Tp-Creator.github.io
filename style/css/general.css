@@ -1,0 +1,11 @@
+:root {
+
+}
+
+
+body {
+    /* cursor: url(https://cur.cursors-4u.net/nature/nat-11/nat1021.cur), default; */
+    cursor: url(../../img/tree.cur), default;
+    /* cursor: url(../../img/fanpage/tree.png), default; */
+    /* cursor: url("../../img/fanpage/tree.png"), auto; */
+}
