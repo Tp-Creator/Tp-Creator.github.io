@@ -11,7 +11,7 @@
     src: url(../fonts/Tinker_Bell.ttf);
 }
 
-/* Färg och fontfamily på alla element + tar bort padding och margin */
+/* Basic Style */
 * {
     color: var(--text);
     font-family: tingeling;
@@ -24,13 +24,51 @@ body {
     cursor: url(../../img/cursor/default.png) 1 8, default;
 }
 
-
 a {
     cursor: url(../../img/cursor/click.png) 2 34, pointer;
     text-decoration: none;
 }
 
 
+/* Keyframes */
+@keyframes hero-content-in {
+    from {
+        opacity: 0;
+        transform: translateY(75px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* ************** */
+
+
+/* GENERAL ELEMENTS */
+.button {
+    font-size: 1.8rem;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* General image styling */
+.block, .hero, .parallax {
+    min-height: 100vh;
+}
+
+.hero, .parallax {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax {
+    background-attachment: fixed;
+}
+/* ************** */
 
 
 /* Navbar */
@@ -43,6 +81,8 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    z-index: 999;
 
     transition: background-color, 0.5s;
 }
@@ -57,58 +97,39 @@ a {
         }
 
 
-
-
-/* General image styling */
-.block, .hero, .parallax {
-    min-height: 100vh;
-}
-
-.hero, .parallax {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
-
-.parallax {
-    background-attachment: fixed;
-}
-
-
 /* Hero content style */
 .hero-content{
     position: relative;
     top: 15vh;
     left: 12vw;
     width: fit-content;
-    /* font-size: 5rem; */
 }
 
     .hero-header{
         font-size: 4.5rem;
+
+        animation: hero-content-in 1s;
         /* font-weight: ; */
         /* text-decoration: none; */
         /* color: transparent; */
         /* text-shadow: 0px 2px 3spx rgba(255, 255, 255, 0.8); */
     }
 
-    .hero-second, .hero-action{
-        font-size: 1.2rem;
-        margin-left: 2rem;
-    }
-
     .hero-second{
+        margin-left: 2rem;
+        font-size: 1.2rem;
         margin-top: 1.8rem;
+        margin-bottom: 25vh;
+
+        animation: hero-content-in 1.5s;
     }
 
     .hero-action {
-        color: black;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 10px;
-        padding: 10px;
+        margin-left: 2rem;
+
+        animation: hero-content-in 3s; 
     }
+
 
 /* Footer */
 #footer{

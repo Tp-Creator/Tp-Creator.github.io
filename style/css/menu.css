@@ -4,9 +4,12 @@
 
 
 #menu {
-    background-image: url(../../img/menu/oil_mid.webp);
+    background-image: url(../../img/menu/oil_mid.png);
     /* background-position: center; */
     background-position-x: center;
+    scale: 1;
+    /* height: 200vh; */
+    /* background-repeat: no-repeat; */
     /* background-size: cover; */
 }
 
