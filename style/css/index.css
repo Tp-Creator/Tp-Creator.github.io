@@ -14,22 +14,51 @@
 /* Small About  */
 #short-about {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.about-content {
-    position: relative;
-    top: 15vh;
-    left: 12vw;
-    width: fit-content;
+    .about-text {
+        margin-left: 12vw;
+        width: 40%;
+
+    }
+
+        .about-header {
+            font-size: 3.5rem;
+            margin-bottom: 0.8em;
+        }
+
+        .about-p {
+            font-size: 1.2em;
+            margin-bottom: 1.2em;
+        }
+
+        #about-action{
+            margin-top: 100px;
+        }
+
+    #short-about #img-placement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+        #short-about img {
+            width: 30vw;
+            border-radius: 10px;
+        }
+
+
+#find-us-img-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
-    .about-header {
-        font-size: 3.5rem;
-    }
-
-    .about-p {
-        font-size: 1.2em;
-    }
 
 
 #map-canvas {
