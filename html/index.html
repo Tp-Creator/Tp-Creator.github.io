@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chef Tingeling</title>
     <link rel="stylesheet" href="../style/css/general.css">
+    <link rel="stylesheet" href="../style/css/index.css">
+    <script src="../javascript/general.js"></script>
 </head>
 <body>
 
     <div id="navbar">
-        <a href="index.html">Tingeling's Kitchen</a>
+        <a href="index.html" id="home">Tingeling's Kitchen</a>
         <a href="menu.html">The Menu</a>
-        <a href="booking.html">Book Table</a>
+        <a href="booking.html">Book Stump</a>
         <a href="fanpage.html">Mr. Tingeling</a>
         <a href="about.html">About</a>
     </div>
@@ -20,41 +22,49 @@
 
     <!--Hero-->
     <div class="hero" id="hero">
-        <p></p>
+        <div class="hero-content">
+            <p class="hero-header">Tingeling's Kitchen</p>
+            <p class="hero-second">A Fresh Taste From the Nature</p>
+            <a class="hero-action" href="booking.html">Book a Stump</a>
+        </div>
     </div>
 
 
     <!--What is this?-->
-    <div>
+    <div class="block">
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur magnam modi magni asperiores doloribus consequatur, temporibus culpa nulla repudiandae impedit quis cumque molestias hic dolorem. Doloribus vitae accusamus laboriosam neque!</p>
     </div>
 
 
     <!--Image for find us-->
-    <div class="hero paralax" id="find-us-img">
-        <p></p>
+    <div class="parallax" id="find-us-img">
+        <h1>On <span id="jump-scare">The</span> Way to New Tastes</h1>
+        <p>Our resturant can easily be found close to your nearest forest</p>
     </div>
 
 
     <!--Find us-->
-    <div id="find-us">
-        <!--Here comes the sun... eh no here comes the google maps embed-->
+    <div class="block" id="find-us">
+        <iframe id="map-canvas" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Oymyakon School&amp;t=k&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" scrolling="no" frameborder: 0;></iframe>
     </div>
 
 
+    <!-- Footer -->
     <div class="hero" id="footer">
-        <div>
-            <h1>Contact</h1>
-            <a href="#find-us">An Unknown place 23b</a>
-            <a href="tel:">+46 023244232</a>
-            <a href="mailto:erik.tingsborg@ntig.se">Tingeling@Woods.com</a>
-        </div>
-        <div>
-            <h1>Creators</h1>
-            <p>Daniel Karlsson</p>
-            <p>Olivia Karlsson</p>
-            <p>Philip Kullen</p>
-            <p>Joel Jägerskogh</p>
+        <div id="footer-content">
+            <div>
+                <h1>Contact</h1>
+                <a href="#find-us">An Unknown place 23b</a>
+                <a href="tel:">+46 023244232</a>
+                <a href="mailto:erik.tingsborg@ntig.se">Tingeling@Woods.com</a>
+            </div>
+            <div>
+                <h1>Creators</h1>
+                <p>Daniel Karlsson</p>
+                <p>Olivia Karlsson</p>
+                <p>Philip Kullen</p>
+                <p id="joel-j">Joel Jägerskogh</p>
+            </div>
         </div>
     </div>
 

@@ -1,0 +1,16 @@
+#hero {
+    background-image: url(../../img/index/hero.webp);
+}
+
+#find-us-img {
+    background-image: url(../../img/index/find_us.webp);
+}
+
+#footer {
+    background-image: url(../../img/index/footer.webp);
+}
+
+#map-canvas {
+    width: 600px;
+    height: 400px;
+}

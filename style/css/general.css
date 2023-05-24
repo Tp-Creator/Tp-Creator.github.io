@@ -1,8 +1,176 @@
+/* Variabler för färger, som vi sedan kan använda */
 :root {
+    font-size: 20px;
+    --background: #071A04;
+    --text: #FFFFFF;
+}
 
+/* Skapar font som vi kan använda */
+@font-face {
+    font-family: tingeling;
+    src: url(../fonts/Tinker_Bell.ttf);
+}
+
+/* Färg och fontfamily på alla element + tar bort padding och margin */
+* {
+    color: var(--text);
+    font-family: tingeling;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    cursor: url(../../img/cursor/default.png) 1 8, default;
 }
 
 
-body {
-    cursor: url(../../img/22131257463fb001e1f75e2a2a9a924e--tinker-bell-small.png), default;
+a {
+    cursor: url(../../img/cursor/click.png) 2 34, pointer;
+    text-decoration: none;
+}
+
+
+
+
+/* Navbar */
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 2.5em;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    transition: background-color, 0.5s;
+}
+
+    #navbar a{
+        margin-right: 40px;
+    }
+
+        #navbar a#home{
+            margin-right: auto;
+            margin-left: 40px; 
+        }
+
+
+
+
+/* General image styling */
+.block, .hero, .parallax {
+    min-height: 100vh;
+}
+
+.hero, .parallax {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.parallax {
+    background-attachment: fixed;
+}
+
+
+/* Hero content style */
+.hero-content{
+    position: relative;
+    top: 15vh;
+    left: 12vw;
+    width: fit-content;
+    /* font-size: 5rem; */
+}
+
+    .hero-header{
+        font-size: 4.5rem;
+        /* font-weight: ; */
+        /* text-decoration: none; */
+        /* color: transparent; */
+        /* text-shadow: 0px 2px 3spx rgba(255, 255, 255, 0.8); */
+    }
+
+    .hero-second, .hero-action{
+        font-size: 1.2rem;
+        margin-left: 2rem;
+    }
+
+    .hero-second{
+        margin-top: 1.8rem;
+    }
+
+/* Footer */
+#footer{
+    height: 150vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+    #footer #footer-content{
+        height: 60vh;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+        #footer-content div{
+            margin-bottom: 10%;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+            #footer-content div h1{
+                font-size: 50px;
+                margin-bottom: 20px;
+            }
+
+            #footer-content div *:not(h1){
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+
+
+
+/***********************/
+/* Easter Eggs*/
+
+@keyframes joel {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+#footer-content div #joel-j:hover{
+    scale: 1.1;
+    animation: joel 6s infinite;
+    transition: all 2s;
+}
+
+
+/* Jump scare */
+@keyframes jump-scare {
+    from {
+        display: fixed;
+        height: 100vh;
+    }
+    to {
+        height: 0;
+    }
+}
+
+#jump-scare {
+    animation: scare 5s;
 }

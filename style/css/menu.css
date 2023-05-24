@@ -1,0 +1,16 @@
+#hero {
+    background-image: url(../../img/menu/oil_top.webp);
+}
+
+
+#menu {
+    background-image: url(../../img/menu/oil_mid.webp);
+    /* background-position: center; */
+    background-position-x: center;
+    /* background-size: cover; */
+}
+
+
+#footer {
+    background-image: url(../../img/menu/oil_down.webp);
+}
