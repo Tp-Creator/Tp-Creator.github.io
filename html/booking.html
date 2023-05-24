@@ -31,27 +31,50 @@
         <div id="form-container">
             <form id="form" action="alert('hej dåre')">
                 <input type="radio" name="booking_state" id="amount" checked="checked">
-                <input type="radio" name="booking_state" id="date">
-                <input type="radio" name="booking_state" id="time">
+                <input type="radio" name="booking_state" id="date" disabled>
+                <input type="radio" name="booking_state" id="time" disabled>
                 <div id="booking_state">
                     <label for="amount">Amount</label>
                     <label for="date">Date</label>
                     <label for="time">Time</label>
                 </div>
 
-                <div>
+                <div id="actual-forms">
+                    <p>Previous</p>
                     <div id="amount-div">
-                        amount
-                        asdf
+                        <p>How Many Are You</p><br>
+
+                        <div>
+                            <input type="radio" name="amount" id="1" value="1">
+                            <input type="radio" name="amount" id="2" value="2">
+                            <input type="radio" name="amount" id="3" value="3">
+                            <input type="radio" name="amount" id="4" value="4">
+                            <input type="radio" name="amount" id="5" value="5">
+                            <input type="radio" name="amount" id="6" value="6">
+                            <input type="radio" name="amount" id="7" value="7">
+                            <input type="radio" name="amount" id="8" value="8">
+                            <input type="radio" name="amount" id="9" value="9">
+                            <input type="radio" name="amount" id="10" value="10">
+    
+                            <label for="1">1</label>
+                            <label for="2">2</label>
+                            <label for="3">3</label>
+                            <label for="4">4</label>
+                            <label for="5">5</label>
+                            <label for="6">6</label>
+                            <label for="7">7</label>
+                            <label for="1">8</label>
+                            <label for="1">9</label>
+                            <label for="10">10</label>
+                        </div>
                     </div>
                     <div id="date-div">
                         date
-                        asdf
                     </div>
                     <div id="time-div">
                         time
-                        asdf
                     </div>
+                    <p>Next</p>
                 </div>
                 <div></div>
             </form>

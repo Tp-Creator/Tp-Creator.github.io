@@ -3,6 +3,12 @@
     font-size: 20px;
     --background: #071A04;
     --text: #FFFFFF;
+    --gray-text: #727272;
+    --light-background: #ffffff26;
+    --gray-background: #ffffff0d;
+    --dark-background: #0000001a;
+    --shadow: #00000040;
+    --brown: #442E1D;
 }
 
 /* Skapar font som vi kan använda */

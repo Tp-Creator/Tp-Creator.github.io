@@ -11,6 +11,12 @@
     }
 
 
+
+input[type="radio"] {
+    display: none;
+}
+
+
 #form-container {
     float: right;
     width: 60%;
@@ -30,24 +36,83 @@
             height: fit-content;
         }
 
-        #booking_state {
+        #form > div {
+            height: 100%;
             width: 100%;
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
         }
 
-        #form div div, #form > input {
+        #booking_state label {
+            padding: 1em;
+            border-radius: 0.6em;
+            background-color: var(--light-background);
+        }
+
+        #form div div{
             display: none;
         }
+            
 
-            #amount:checked ~ div #amount-div {
-                display: flex;
-            }
+        #amount:not(:checked) ~ div label[for="amount"]{
+            color: var(--gray-text);
+            background-color: var(--gray-background);
+            box-shadow: inset 2px 4px 4px var(--shadow);
+        }
 
-            #date:checked ~ div #date-div {
-                display: flex;
-            }
+        #amount:disabled ~ div label[for="amount"]{
+            color: var(--gray-text);
+            background-color: var(--dark-background);
+            box-shadow: inset 2px 4px 4px var(--shadow);
+        }
 
-            #time:checked ~ div #time-div {
-                display: flex;
-            }
+        #amount:checked ~ div #amount-div {
+            display: flex;
+        }
+            
+
+        #date:not(:checked) ~ div label[for="date"]{
+            color: var(--gray-text);
+            background-color: var(--gray-background);
+            box-shadow: inset 2px 4px 4px var(--shadow);
+        }
+
+        #date:disabled ~ div label[for="date"]{
+            color: var(--gray-text);
+            background-color: var(--dark-background);
+            box-shadow: inset 2px 4px 4px var(--shadow);
+        }
+
+        #date:checked ~ div #date-div {
+            display: flex;
+        }
+            
+
+        #time:not(:checked) ~ div label[for="time"]{
+            color: var(--gray-text);
+            background-color: var(--gray-background);
+            box-shadow: inset 2px 4px 4px var(--shadow);
+        }
+
+        #time:disabled ~ div label[for="time"]{
+            color: var(--gray-text);
+            background-color: var(--dark-background);
+            box-shadow: inset 2px 4px 4px var(--shadow);
+        }
+
+        #time:checked ~ div #time-div {
+            display: flex;
+        }
+
+
+
+        #actual-forms label {
+            background-color: var(--brown);
+            padding: 2em;
+            border-radius: 5px;
+        }
+
+        #actual-forms div {
+            height: 100%;
+        }
