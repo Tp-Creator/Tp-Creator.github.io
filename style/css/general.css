@@ -103,6 +103,13 @@ a {
         margin-top: 1.8rem;
     }
 
+    .hero-action {
+        color: black;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
 /* Footer */
 #footer{
     height: 150vh;
