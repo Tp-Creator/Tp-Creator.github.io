@@ -1,14 +1,14 @@
 /* Images for some divs */
 #hero {
-    background-image: url(../../img/index/hero.webp);
+    background-image: url(../img/index/hero.webp);
 }
 
 #find-us-img {
-    background-image: url(../../img/index/find_us.webp);
+    background-image: url(../img/index/find_us.webp);
 }
 
 #footer {
-    background-image: url(../../img/index/footer.webp);
+    background-image: url(../img/index/footer.webp);
 }
 
 /* Small About  */
