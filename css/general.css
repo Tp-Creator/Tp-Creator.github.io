@@ -160,7 +160,7 @@ a, label, .clickable {
         justify-content: space-evenly;
     }
 
-        #footer-content div{
+        #footer-content > div{
             margin-bottom: 10%;
 
             display: flex;
@@ -172,7 +172,7 @@ a, label, .clickable {
                 margin-bottom: 20px;
             }
 
-            #footer-content div *:not(h1){
+            #footer-content > div > *:not(h1):not(div){
                 font-size: 25px;
                 margin-bottom: 20px;
             }
@@ -203,7 +203,58 @@ a, label, .clickable {
 
 
 #philip {
-    
+    transition: transform 1000000000000000000000000000000s;
+}
+#activate-control {
+    /* display: none; */
+}
+#activate-control:checked ~ div {
+    transition: height 1s;
+    height: 50px;
+}
+#up {
+    transition: height 1000000s;
+    height: 0;
+    width: 50px;
+    background-color: green;
+    transform: rotate(45deg);
+}
+#down {
+    transition: height 1000000s;
+    height: 0;
+    width: 50px;
+    background-color: green;
+    transform: rotate(45deg);
+}
+#left {
+    transition: height 1000000s;
+    height: 0;
+    width: 50px;
+    background-color: green;
+    transform: rotate(45deg);
+}
+#right {
+    transition: height 1000000s;
+    height: 0;
+    width: 50px;
+    background-color: green;
+    transform: rotate(45deg);
+}
+#up:hover ~ #philip {
+    transition: transform 2s;
+    transform: translateY(-100vh);
+}
+#down:hover ~ #philip {
+    transition: transform 2s;
+    transform: translateY(100vh);
+}
+#right:hover ~ #philip {
+    transition: transform 2s;
+    transform: translateX(26vw);
+}
+#left:hover ~ #philip {
+    transition: transform 2s;
+    transform: translateX(-64vw);
 }
 
 
