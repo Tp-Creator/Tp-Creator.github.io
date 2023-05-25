@@ -8,7 +8,8 @@
     --gray-background: #ffffff0d;
     --dark-background: #0000001a;
     --shadow: #00000040;
-    --brown: #442E1D;
+    --brown: #2C2418;
+    --dark-brown: #262017;
 }
 
 /* Skapar font som vi kan använda */
@@ -30,7 +31,7 @@ body {
     cursor: url(../../img/cursor/default.png) 1 8, default;
 }
 
-a, label {
+a, label, .clickable {
     cursor: url(../../img/cursor/click.png) 0 34, pointer;
     text-decoration: none;
 }
