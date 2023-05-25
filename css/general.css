@@ -63,6 +63,27 @@ a, label, .clickable {
     padding: 10px;
 }
 
+    /* Link fokus, animates underline */
+.link, .nav-active {
+    background-image: linear-gradient(var(--text), var(--text));
+    
+    background-size: 0% 0.1em;
+    background-position-x: 0%;
+    background-position-y: 100%;
+
+    padding-bottom: 5px;
+    background-repeat: no-repeat;
+    
+    transition: background-size 0.5s ease-in-out;
+}
+
+.link:hover:not(.nav-active), 
+.link:focus:not(.nav-active), 
+.link:active:not(.nav-active) {
+    background-size: 100% 0.1em;
+}
+    /************/
+
 /* General image styling */
 .block {
     min-height: 150vh;
@@ -102,13 +123,21 @@ a, label, .clickable {
     transition: background-color, 0.5s;
 }
 
+    /* alla navbar länkar */
     #navbar a{
         margin-right: 40px;
+        padding-right: 0.1em;
     }
 
-        #navbar a#home{
+        /* För att navbarens första item ska lägga sig längst till vänster */
+        #navbar a:first-child{
             margin-right: auto;
             margin-left: 40px; 
+        }
+        
+        /* Länken till den sida vi är på just nu */
+        .nav-active {
+            background-size: 100% 0.1em;
         }
 
 

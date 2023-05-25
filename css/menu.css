@@ -10,23 +10,28 @@
 #menu::before {
     position: absolute;
     background-position-x: center;
-    height: 300%;
+    height: 700%;
     width: 100%;
     background-image: url(../img/menu/oil_mid.png);
+    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    top: -30vh;
     opacity: 0.1;
     z-index: -10;
     content: "";
 }
 
-
+/* Hela menyn med alla rätter och bilder */
 #menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30vh;
     /* background-color: black; */
     /* padding-top: 5em; */
 }
 
+    /* För en kategori och rätter */
     .food-type-card{
         /* display: flex; */
         /* background-color: aqua; */
@@ -36,21 +41,23 @@
         margin-bottom: 10em;
     }
         
-
+        /* För informationen som finns för varje kategori i text */
         .food-information-content{
             display: flex;
             justify-content: space-around;
         }
+
+        /* För de som har texten till höger */
         .food-information-content.right{
             flex-direction: row-reverse;
         }
 
-
+            
             .food-information-text{
                 display: flex;
                 flex-direction: column;
                 /* flex: 2; */
-                width: 30%;
+                max-width: 30%;
             }
 
                 .food-type-header{
@@ -80,12 +87,12 @@
 
                         .dish .dish-name{
                             color: var(--text);
-                            font-size: 30px;
+                            font-size: 1.5rem;
                         }
 
                         .dish .dish-description{
                             color: var(--gray-descriptive);
-                            font-size: 20px;
+                            font-size: 1rem;
                             margin-left: 20px;
                             margin-top: 5px;
                         }
@@ -97,6 +104,11 @@
                 margin-top: 80px;
                 align-self: center;
                 border-radius: 10px;
+                transition: all 1s;
+            }
+            .food-information-content img:hover{
+                box-shadow: 2px 4px 20px 1px rgba(0, 0, 0, 0.492);
+                scale: 1.02;
             }
 
 
