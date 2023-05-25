@@ -1,19 +1,37 @@
 #hero {
-    background-image: url(../../img/menu/oil_top.webp);
+    background-image: url(../img/menu/oil_top.webp);
 }
 
 
 #menu {
-    background-image: url(../../img/menu/oil_mid.png);
+    position: relative;
+    /* background-image: url(../img/menu/oil_mid.png); */
+    /* opacity: 0.3; */
     /* background-position: center; */
-    background-position-x: center;
-    scale: 1;
-    /* height: 200vh; */
+    /* background-position-x: center;
+    scale: 1; 
+    height: 200vh; */
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
 }
 
+/*  Detta är oljan i bakgrunden
+    Den läggs till som första elementet i #menu med hjälp av ::before */
+#menu::before {
+    content: "";
+    background-image: url(../img/menu/oil_mid.png);
+    background-position-x: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* display: block; */
+    /* top: 0px;
+    right: 0px; */
+    opacity: 0.1;
+    z-index: 10;
+}
+
 
 #footer {
-    background-image: url(../../img/menu/oil_down.webp);
+    background-image: url(../img/menu/oil_down.webp);
 }
