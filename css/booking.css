@@ -1,3 +1,8 @@
+#navbar {
+    width: 60%;
+    right: 0;
+}
+
 #hero {
     background-image: url("../img/booking/hero.webp");
     float: left;

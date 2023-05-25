@@ -40,7 +40,7 @@ a, label, .clickable {
 
 
 /* Keyframes */
-@keyframes hero-content-in {
+@keyframes content-in {
     from {
         opacity: 0;
         transform: translateY(75px);
@@ -51,16 +51,44 @@ a, label, .clickable {
         transform: translateY(0px);
     }
 }
+
+@keyframes breath {
+    /* 0% {
+        transform: translateY(0px);
+    } */
+    from {
+        transform: translateY(0.5em);
+    }
+    to {
+        transform: translateY(-0.5em);
+    }
+    /* 100% {
+        transform: translateY(0em);
+    } */
+
+}
+
 /* ************** */
 
 
 /* GENERAL ELEMENTS */
 .button {
+    display: block;
+    width: fit-content;
     font-size: 1.8rem;
     color: black;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
     padding: 10px;
+    transition: all 0.5s;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+    scale: 1.05;
+    color: var(--background);
+    box-shadow: 2px 4px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
     /* Link fokus, animates underline */
@@ -151,7 +179,7 @@ a, label, .clickable {
 
     .hero-header{
         font-size: 4.5rem;
-        animation: hero-content-in 1s;
+        animation: content-in 1s;
 
         /* font-weight: ; */
         /* text-decoration: none; */
@@ -165,12 +193,12 @@ a, label, .clickable {
         margin-top: 1.8rem;
         margin-bottom: 25vh;
 
-        animation: hero-content-in 1.5s;
+        animation: content-in 1.5s;
     }
 
     .hero-action {
         margin-left: 2rem;
-        animation: hero-content-in 3s; 
+        animation: content-in 2s; 
     }
 
 
@@ -235,54 +263,86 @@ a, label, .clickable {
     transition: transform 1000000000000000000000000000000s;
 }
 #activate-control {
-    /* display: none; */
+    display: none;
 }
 #activate-control:checked ~ div {
     transition: height 1s;
     height: 50px;
+    width: 50px;
+}
+#activate-control:checked ~ #reset {
+    transition: height 1s;
+    height: 30px;
+    width: 30px;
+}
+#reset {
+    position: fixed;
+    z-index: 2;
+    bottom: 103px;
+    right: 85px;
+    height: 0px;
+    width: 0px;
+    border-radius: 2px;
+    background-color: #800000;
 }
 #up {
-    transition: height 1000000s;
-    height: 0;
-    width: 50px;
+    position: fixed;
+    bottom: 160px;
+    right: 75px;
+    height: 0px;
+    width: 0px;
     background-color: green;
     transform: rotate(45deg);
 }
+
 #down {
-    transition: height 1000000s;
-    height: 0;
-    width: 50px;
+    position: fixed;
+    bottom: 66px;
+    right: 75px;
+    height: 0px;
+    width: 0px;
     background-color: green;
     transform: rotate(45deg);
 }
+
 #left {
-    transition: height 1000000s;
-    height: 0;
-    width: 50px;
-    background-color: green;
+    position: fixed;
+    bottom: 113px;
+    right: 122px;
+    height: 0px;
+    width: 0px;
+    background-color: darkgreen;
     transform: rotate(45deg);
 }
+
 #right {
-    transition: height 1000000s;
-    height: 0;
-    width: 50px;
-    background-color: green;
+    position:fixed;
+    bottom: 113px;
+    right: 28px;
+    height: 0px;
+    width: 0px;
+    background-color: darkgreen;
     transform: rotate(45deg);
+}
+
+/* reset fungerar bara halft */
+#reset:hover ~ #philip {
+    transition: transform 1s linear;
 }
 #up:hover ~ #philip {
-    transition: transform 2s;
-    transform: translateY(-100vh);
+    transition: transform 8s linear;
+    transform: translateY(-640vh);
 }
 #down:hover ~ #philip {
-    transition: transform 2s;
-    transform: translateY(100vh);
+    transition: transform 8s linear;
+    transform: translateY(35vh);
 }
 #right:hover ~ #philip {
-    transition: transform 2s;
+    transition: transform 6s linear;
     transform: translateX(26vw);
 }
 #left:hover ~ #philip {
-    transition: transform 2s;
+    transition: transform 6s linear;
     transform: translateX(-64vw);
 }
 
