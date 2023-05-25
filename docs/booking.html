@@ -8,15 +8,16 @@
     <link rel="stylesheet" href="../style/css/general.css">
     <link rel="stylesheet" href="../style/css/booking.css">
     <script src="../javascript/general.js"></script>
+    <script src="../javascript/booking.js"></script>
 </head>
 <body>
 
     <div id="navbar">
         <a href="index.html" id="home">Tingeling's Kitchen</a>
-        <!-- <a href="menu.html">The Menu</a>
+        <a href="menu.html">The Menu</a>
         <a href="booking.html">Book Stump</a>
         <a href="fanpage.html">Mr. Tingeling</a>
-        <a href="about.html">About</a> -->
+        <a href="about.html">About</a>
     </div>
 
     <div>
@@ -29,44 +30,47 @@
 
         <!--Booking part-->
         <div id="form-container">
-            <form id="form" action="alert('hej dåre')">
+            <form class="flex-center-up" id="form" action="alert('hej dåre')">
                 <input type="radio" name="booking_state" id="amount" checked="checked">
                 <input type="radio" name="booking_state" id="date" disabled>
                 <input type="radio" name="booking_state" id="time" disabled>
-                <div id="booking_state">
+                <div class="flex-horizontal" id="booking_state">
                     <label for="amount">Amount</label>
                     <label for="date">Date</label>
                     <label for="time">Time</label>
                 </div>
 
-                <div id="actual-forms">
-                    <p>Previous</p>
-                    <div id="amount-div">
-                        <p>How Many Are You</p><br>
+                <div class="flex-horizontal" id="actual-forms">
+                    <p class="clickable" id="previous">Previous</p>
+                    <div class="flex-center-up" id="amount-div">
+                        <p>How Many Are You</p>
 
-                        <div>
+                        
+                        <div class="flex-horizontal">
                             <input type="radio" name="amount" id="1" value="1">
-                            <input type="radio" name="amount" id="2" value="2">
-                            <input type="radio" name="amount" id="3" value="3">
-                            <input type="radio" name="amount" id="4" value="4">
-                            <input type="radio" name="amount" id="5" value="5">
-                            <input type="radio" name="amount" id="6" value="6">
-                            <input type="radio" name="amount" id="7" value="7">
-                            <input type="radio" name="amount" id="8" value="8">
-                            <input type="radio" name="amount" id="9" value="9">
-                            <input type="radio" name="amount" id="10" value="10">
-    
                             <label for="1">1</label>
+                            <input type="radio" name="amount" id="2" value="2">
                             <label for="2">2</label>
+                            <input type="radio" name="amount" id="3" value="3">
                             <label for="3">3</label>
+                            <input type="radio" name="amount" id="4" value="4">
                             <label for="4">4</label>
+                            <input type="radio" name="amount" id="5" value="5">
                             <label for="5">5</label>
+                        </div>
+                        <div class="flex-horizontal">
+                            <input type="radio" name="amount" id="6" value="6">
                             <label for="6">6</label>
+                            <input type="radio" name="amount" id="7" value="7">
                             <label for="7">7</label>
-                            <label for="1">8</label>
-                            <label for="1">9</label>
+                            <input type="radio" name="amount" id="8" value="8">
+                            <label for="8">8</label>
+                            <input type="radio" name="amount" id="9" value="9">
+                            <label for="9">9</label>
+                            <input type="radio" name="amount" id="10" value="10">
                             <label for="10">10</label>
                         </div>
+                        <div></div>
                     </div>
                     <div id="date-div">
                         date
@@ -74,7 +78,7 @@
                     <div id="time-div">
                         time
                     </div>
-                    <p>Next</p>
+                    <p class="clickable" id="next">Next</p>
                 </div>
                 <div></div>
             </form>
