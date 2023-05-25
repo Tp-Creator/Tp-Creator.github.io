@@ -3,33 +3,102 @@
 }
 
 
-#menu {
-    position: relative;
-    /* background-image: url(../img/menu/oil_mid.png); */
-    /* opacity: 0.3; */
-    /* background-position: center; */
-    /* background-position-x: center;
-    scale: 1; 
-    height: 200vh; */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
-}
+
 
 /*  Detta är oljan i bakgrunden
     Den läggs till som första elementet i #menu med hjälp av ::before */
 #menu::before {
-    content: "";
-    background-image: url(../img/menu/oil_mid.png);
-    background-position-x: center;
-    height: 100%;
-    width: 100%;
     position: absolute;
-    /* display: block; */
-    /* top: 0px;
-    right: 0px; */
+    background-position-x: center;
+    height: 300%;
+    width: 100%;
+    background-image: url(../img/menu/oil_mid.png);
     opacity: 0.1;
-    z-index: 10;
+    z-index: -10;
+    content: "";
 }
+
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: black; */
+    /* padding-top: 5em; */
+}
+
+    .food-type-card{
+        /* display: flex; */
+        /* background-color: aqua; */
+        width: 90vw;
+        border-radius: 20px;
+        padding: 2em;
+        margin-bottom: 10em;
+    }
+        
+
+        .food-information-content{
+            display: flex;
+            justify-content: space-around;
+        }
+        .food-information-content.right{
+            flex-direction: row-reverse;
+        }
+
+
+            .food-information-text{
+                display: flex;
+                flex-direction: column;
+                /* flex: 2; */
+                width: 30%;
+            }
+
+                .food-type-header{
+                    color: var(--text);
+                    font-size: 50px;
+                    background-color: var(--themeColor);
+                    width: fit-content;
+                    /* margin-left: 5em; */
+                    margin-bottom: 1em;
+                    padding: 5px 10px 5px 10px;
+                    text-align: center;
+                    align-self: center;
+                }
+
+
+
+                .dishes{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                    .dish{
+                        width: fit-content;
+                        margin-bottom: 1em;
+                    }
+
+                        .dish .dish-name{
+                            color: var(--text);
+                            font-size: 30px;
+                        }
+
+                        .dish .dish-description{
+                            color: var(--gray-descriptive);
+                            font-size: 20px;
+                            margin-left: 20px;
+                            margin-top: 5px;
+                        }
+            
+            .food-information-content img{
+                max-width: 40vw;
+                flex: 3;
+                height: fit-content;
+                margin-top: 80px;
+                align-self: center;
+                border-radius: 10px;
+            }
+
 
 
 #footer {

@@ -4,6 +4,8 @@
     --background: #071A04;
     --text: #FFFFFF;
     --gray-text: #727272;
+    --gray-inactive: #727272;
+    --gray-descriptive: #9b9b9b;
     --light-background: #ffffff26;
     --gray-background: #ffffff0d;
     --dark-background: #0000001a;
@@ -28,11 +30,11 @@
 
 body {
     background-color: var(--background);
-    cursor: url(../../img/cursor/default.png) 1 8, default;
+    cursor: url(../img/cursor/default.png) 1 8, default;
 }
 
 a, label, .clickable {
-    cursor: url(../../img/cursor/click.png) 0 34, pointer;
+    cursor: url(../img/cursor/click.png) 0 34, pointer;
     text-decoration: none;
 }
 
@@ -197,6 +199,11 @@ a, label, .clickable {
     scale: 1.1;
     animation: joel 6s infinite;
     transition: all 2s;
+}
+
+
+#philip {
+    
 }
 
 
