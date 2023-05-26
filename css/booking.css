@@ -16,6 +16,14 @@
     }
 
 
+.comment {
+    color: var(--gray-descriptive);
+    font-size: 0.6rem;
+    text-align: center;
+    position: relative;
+    top: 13vh;
+}
+
 .flex-center-up {
     display: flex;
     width: 100%;
