@@ -131,8 +131,33 @@ a, label, .clickable {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* ************** */
+
+/* Fade in on scroll animation */
+.reveal-on-scroll:not(.fade-right,.fade-left) {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal-on-scroll.fade-right {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal-on-scroll.fade-left {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+
+.reveal-on-scroll.scroll-active {
+    transform: translateY(0);
+    transform: translateX(0);
+    opacity: 1;
+}
+/*************/
 
 
 /* Navbar */
