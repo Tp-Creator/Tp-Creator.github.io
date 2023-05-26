@@ -108,14 +108,15 @@
                         }
     
                             
-            .food-information-content img{
+            .food-information-content img.img{
                 max-width: 40vw;
                 /* flex: 3; */
                 height: fit-content;
                 margin-top: 80px;
                 align-self: center;
                 border-radius: 10px;
-                transition: scale 1s;
+                scale: 1;
+                transition: 1s transform ease, 1s opacity ease, 1s scale ease, 1s box-shadow ease;
             }
             .food-information-content img:hover{
                 box-shadow: 2px 4px 20px 1px rgba(0, 0, 0, 0.492);

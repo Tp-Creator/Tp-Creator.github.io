@@ -33,6 +33,10 @@ body {
     cursor: url(../img/cursor/default.png) 1 8, default;
 }
 
+*:disabled {
+    cursor: url(../img/cursor/default.png) 1 8, default;
+}
+
 a, label, .clickable {
     cursor: url(../img/cursor/click.png) 0 34, pointer;
     text-decoration: none;
@@ -137,22 +141,19 @@ a, label, .clickable {
 .reveal-on-scroll:not(.fade-right,.fade-left) {
     transform: translateY(150px);
     opacity: 0;
-    transition: 1s transform ease;
-    transition: 1s opacity ease;
+    transition: 1s transform ease, 1s opacity ease;
 }
 
 .reveal-on-scroll.fade-right {
     transform: translateX(150px);
     opacity: 0;
-    transition: 1s transform ease;
-    transition: 1s opacity ease;
+    transition: 1s transform ease, 1s opacity ease;
 }
 
 .reveal-on-scroll.fade-left {
     transform: translateX(-150px);
     opacity: 0;
-    transition: 1s transform ease;
-    transition: 1s opacity ease;
+    transition: 1s transform ease, 1s opacity ease;
 }
 
 .reveal-on-scroll.scroll-active {
