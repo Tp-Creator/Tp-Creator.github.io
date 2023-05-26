@@ -1,0 +1,40 @@
+#navbar{
+    background-color: var(--brown);
+}
+body{
+    background-color: rgb(119, 178, 104);
+}
+.hero-header{ 
+    color: rgb(255, 211, 52);
+    text-shadow: 2px 2px rgb(212, 112, 36);
+    
+}
+.hero-content{
+
+}
+.image-cover{
+    float: right;
+    max-width: 25%;
+    max-height:15%;
+}
+
+.chapter-bar{
+    margin: 0;
+    padding: 0%;
+    width: fit-content;
+    display: flex;
+}
+
+.chapter-bar img{
+    width: fit-content;
+    flex-direction: left;
+}
+
+.chapter-bar #chapter1{
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(132, 197, 36);
+    font-size: 5vh;
+    position: relative;
+    transform: translate(-500px, 165px) rotate(90deg);
+}
