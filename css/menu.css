@@ -81,22 +81,33 @@
                 }
 
                     .dish{
-                        width: fit-content;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        /* gap: 3em; */
+                        
+                        width: 100%;
                         margin-bottom: 1em;
                     }
 
-                        .dish .dish-name{
-                            color: var(--text);
-                            font-size: 1.5rem;
-                        }
+                            .dish-info .dish-name{
+                                color: var(--text);
+                                font-size: 1.5rem;
+                            }
 
-                        .dish .dish-description{
-                            color: var(--gray-descriptive);
-                            font-size: 1rem;
-                            margin-left: 20px;
-                            margin-top: 5px;
+                            .dish-info .dish-description{
+                                color: var(--gray-descriptive);
+                                font-size: 1rem;
+                                margin-left: 20px;
+                                margin-top: 5px;
+                                max-width: 80%;
+                            }
+
+                        .dish .prize {
+                            min-width: fit-content;
                         }
-            
+    
+                            
             .food-information-content img{
                 max-width: 40vw;
                 /* flex: 3; */
