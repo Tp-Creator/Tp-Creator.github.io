@@ -1,21 +1,31 @@
 #navbar {
-    width: 60%;
-    right: 0;
+    /* width: 60%; */
+    /* right: 0; */
+    /* background-color: var(--background); */
 }
 
+/* Placerar heron till vänster */
 #hero {
     background-image: url("../img/booking/hero.webp");
     float: left;
-    width: 40%;
+    width: 30%;
 }
 
+    /* Placerar hero texten på rätt plats */
     .hero-content{
         text-align: center;
         width: 100%;
         left: 0;
     }
 
+input:disabled + label{
+    cursor: url(../img/cursor/default.png) 1 8, default;
+}
+input + label{
+    user-select: none;
+}
 
+/* Till detalj text på amount delen om att ringa om de vill boka fler stubbar */
 .comment {
     color: var(--gray-descriptive);
     font-size: 0.6rem;
@@ -24,6 +34,7 @@
     top: 13vh;
 }
 
+/*  */
 .flex-center-up {
     width: 100%;
     height: 100%;
@@ -32,11 +43,13 @@
     align-items: center;
     flex-direction: column;
 }
+
+    /* samtliga divs och p taggar i denna klass får samma höjd som förälder elementet */
     .flex-center-up > div, .flex-center-up > p {
         height: 100%;
     }
 
-
+/* samma som flex-center-up men horizontell ordning på elementen */
 .flex-horizontal {
     height: 100%;
     width: 100%;
@@ -50,78 +63,97 @@
     }
 
 
-
+/* Tar bort samtliga radios, de är bara i vägen*/
 input[type="radio"] {
     display: none;
 }
 
-
+/* Delen som bookingen sker i (allt utom Hero) */
 #form-container {
     float: right;
-    width: 60%;
+    width: 70%;
     height: 100vh;
 }
 
-
+    /* design för elementen som visar var vi är i boknings processen */
     #booking_state label {
         padding: 1em;
         border-radius: 0.6em;
         background-color: var(--light-background);
+        box-shadow: 0.1em 0.2em 0.5em var(--shadow);
     }
     
-    #form > div > div {
+    /*  Visar inte de olika div:arna som innehåller frågorna som användaren ska svara på
+        för att boka stubbar. (default läget) */
+    .booking-part {
         display: none;
     }
+    /* Old */
+    /* #form > div > div {
+        display: none;
+    } */
 
-    
+
+        /* AMOUNT */
+        /* Om radios inte är markerad style:ar vi dess label  */
         #amount:not(:checked) ~ div label[for="amount"] {
             color: var(--gray-text);
             background-color: var(--gray-background);
             box-shadow: inset 0.1em 0.2em 0.2em var(--shadow);
         }
 
+        /* Om radios är checked visar vi diven med dess fråga */
         #amount:checked ~ div #amount-div {
             display: flex;
         }
-            
-
+        
+        
+        /* DATE */
+        /* Om radios inte är markerad style:ar vi dess label  */
         #date:not(:checked) ~ div label[for="date"] {
             color: var(--gray-text);
             background-color: var(--gray-background);
             box-shadow: inset 0.1em 0.2em 0.2em var(--shadow);
         }
 
+        /*  Om radios är disabled ändrar vi style på dess lable och musens ikon på hover,
+            så man ser att den inte går att klicka på */
         #date:disabled ~ div label[for="date"] {
             background-color: var(--dark-background);
             cursor: url(../img/cursor/default.png) 1 8, default;
         }
 
+        /* Om radios är checked visar vi diven med dess fråga */
         #date:checked ~ div #date-div {
             display: flex;
         }
             
 
+        /* TIME */
+        /* Om radios inte är markerad style:ar vi dess label  */
         #time:not(:checked) ~ div label[for="time"] {
             color: var(--gray-text);
             background-color: var(--gray-background);
             box-shadow: inset 0.1em 0.2em 0.2em var(--shadow);
         }
 
+        /*  Om radios är disabled ändrar vi style på dess lable och musens ikon på hover,
+            så man ser att den inte går att klicka på */
         #time:disabled ~ div label[for="time"] {
             background-color: var(--dark-background);
             cursor: url(../img/cursor/default.png) 1 8, default;
         }
 
+        /* Om radios är checked visar vi diven med dess fråga */
         #time:checked ~ div #time-div {
             display: flex;
         }
 
           
 
+    /* AMOUNT *****************/
 
-
-
-
+    /* style:ar lables i amount-div */
     #amount-div label {
         height: 3em;
         width: 3em;
@@ -131,7 +163,59 @@ input[type="radio"] {
         text-align: center;
     }
 
+    /*  Vi stylar om lablen till en checked radio,
+        fungerar eftersom alla lables ligger direkt efter
+        sin input */
     #amount-div input[type="radio"]:checked + label {
+        background-color: var(--dark-brown);
+        box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
+    }
+
+
+
+    /* DATE *******************/
+
+    /* Ändrar flex-horizontal i alla booking part */
+    .booking-part > .flex-horizontal {
+        justify-content: space-between;
+    }
+
+    /* diven för att visa vilken månad vi är i */
+    #calendar-month p {
+        width: fit-content;
+    }
+
+    #date-div .calendar-week label {
+        height: 2.5em;
+        width: 2.5em;
+        line-height: 2.5em;
+        background-color: var(--brown);
+        border-radius: 1.5em;
+        text-align: center;
+    }
+
+    #date-div .calendar-week label.available {
+        background-color: lightgreen;
+    }
+    #date-div .calendar-week label.available-out {
+        background-color: rgba(144, 238, 144, 0.466);
+    }
+    
+    #date-div .calendar-week label.today {
+        background-color: blue;
+    }
+    #date-div .calendar-week label.today-out {
+        background-color: rgba(0, 0, 255, 0.459);
+    }
+
+    #date-div .calendar-week label.unavailable {
+        background-color: darkcyan;
+    }
+    #date-div .calendar-week label.unavailable-out {
+        background-color: rgba(0, 139, 139, 0.445);
+    }
+
+    #date-div input[type="radio"]:checked + label {
         background-color: var(--dark-brown);
         box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }

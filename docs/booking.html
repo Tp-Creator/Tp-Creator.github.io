@@ -42,7 +42,7 @@
 
                 <div class="flex-horizontal" id="actual-forms">
                     <p class="clickable" id="previous">Previous</p>
-                    <div class="flex-center-up" id="amount-div">
+                    <div class="flex-center-up booking-part" id="amount-div">
                         <p>How Many Are You</p>
 
                         
@@ -72,23 +72,28 @@
                         </div>
                         <div><p class="comment">If You Wish to Book more than 10 Stumps Please Contact us. Phone: +46 79-234 23 32</p></div>
                     </div>
-                    <div class="flex-center-up" id="date-div">
+                    
+                    <div class="flex-center-up booking-part" id="date-div">
                         <p>At What Date</p>
 
                         
-                        <div class="flex-horizontal">
-                            <input type="radio" name="date" id="date-1" value="1">
-                            <label for="date-1">1</label>
-                            <input type="radio" name="date" id="date-2" value="2">
-                            <label for="date-2">2</label>
-                            <input type="radio" name="date" id="date-3" value="3">
-                            <label for="date-3">3</label>
-                            <input type="radio" name="date" id="date-4" value="4">
-                            <label for="date-4">4</label>
-                            <input type="radio" name="date" id="date-5" value="5">
-                            <label for="date-5">5</label>
+                        <div class="flex-horizontal" id="calendar-month">
+                            <img id="previous-month" src="../img/booking/left_wing.svg" alt="">
+                            <p id="current-month"></p>
+                            <img id="next-month" src="../img/booking/right_wing.svg" alt="">
                         </div>
+
                         <div class="flex-horizontal">
+                            <p>Mon</p>
+                            <p>Tue</p>
+                            <p>Wed</p>
+                            <p>Thu</p>
+                            <p>Fri</p>
+                            <p>Sat</p>
+                            <p>Sun</p>
+                        </div>
+                        
+                        <!-- <div class="flex-horizontal">
                             <input type="radio" name="date" id="date-6" value="6">
                             <label for="date-6">6</label>
                             <input type="radio" name="date" id="date-7" value="7">
@@ -99,10 +104,10 @@
                             <label for="date-9">9</label>
                             <input type="radio" name="date" id="date-10" value="10">
                             <label for="date-10">10</label>
-                        </div>
-                        <div><p class="comment">If You Wish to Book more than 10 Stumps Please Contact us. Phone: +46 79-234 23 32</p></div>
+                        </div> -->
                     </div>
-                    <div id="time-div">
+
+                    <div class="booking-part" id="time-div">
                         time
                     </div>
                     <p class="clickable" id="next">Next</p>
