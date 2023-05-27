@@ -28,7 +28,7 @@ input + label{
 /* Till detalj text på amount delen om att ringa om de vill boka fler stubbar */
 .comment {
     color: var(--gray-descriptive);
-    font-size: 0.6rem;
+    font-size: 1rem;
     text-align: center;
     position: relative;
     top: 13vh;
@@ -88,11 +88,10 @@ input[type="radio"] {
     .booking-part {
         display: none;
     }
-    /* Old */
-    /* #form > div > div {
-        display: none;
-    } */
 
+        .question {
+            font-size: 2rem;
+        }
 
         /* AMOUNT */
         /* Om radios inte är markerad style:ar vi dess label  */
@@ -162,12 +161,15 @@ input[type="radio"] {
         border-radius: 1.5em;
         text-align: center;
     }
+    #amount-div label:hover {
+        background-color: rgba(104, 52, 4, 0.788);
+    }
 
     /*  Vi stylar om lablen till en checked radio,
         fungerar eftersom alla lables ligger direkt efter
         sin input */
     #amount-div input[type="radio"]:checked + label {
-        background-color: var(--dark-brown);
+        background-color: rgba(255, 255, 255, 0.05);
         box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }
 
@@ -176,8 +178,8 @@ input[type="radio"] {
     /* DATE *******************/
 
     /* Ändrar flex-horizontal i alla booking part */
-    .booking-part > .flex-horizontal {
-        justify-content: space-between;
+    #calendar-div > .flex-horizontal {
+        /* justify-content: space-between; */
     }
 
     /* diven för att visa vilken månad vi är i */
@@ -185,37 +187,86 @@ input[type="radio"] {
         width: fit-content;
     }
 
+    #day-names {
+        justify-content: center;
+        gap: .2em;
+        min-height: 2.5em;
+        max-height: 2.5em;
+        align-items: center;
+    }
+        #day-names * {
+            width: 2.5em;
+            text-align: center;
+            /* height: 2.5em; */
+
+        }
+
+    #calendar-div {
+        justify-content: center;
+        /* height: 50vh; */
+        gap: .2em;
+
+    }
+    .calendar-week {
+        gap: .2em;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
     #date-div .calendar-week label {
         height: 2.5em;
         width: 2.5em;
         line-height: 2.5em;
-        background-color: var(--brown);
+        /* background-color: var(--brown); */
         border-radius: 1.5em;
         text-align: center;
+        /* margin: 3px; */
+        transition: background-color 0.15s ease;
+    }
+    #date-div .calendar-week label:not(.unavailable, .unavailable-out):hover {
+        /* border: 2px solid var(--brown); */
+        /* scale: 1.1; */
+        /* box-shadow: inset 0 0 0 5px rgb(73, 56, 0); */
+        color: white;
+        background-color: rgb(53, 185, 12);
     }
 
+    /* Style för de dagar som är i framtiden */
     #date-div .calendar-week label.available {
-        background-color: lightgreen;
+        background-color: var(--calendar-available);
     }
     #date-div .calendar-week label.available-out {
-        background-color: rgba(144, 238, 144, 0.466);
+        color: var(--gray-descriptive);
+        background-color: var(--calendar-available-out);
+        box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }
     
+    /* Style för dagen som är idag */
     #date-div .calendar-week label.today {
-        background-color: blue;
+        background-color: var(--calendar-today);
     }
     #date-div .calendar-week label.today-out {
-        background-color: rgba(0, 0, 255, 0.459);
+        background-color: var(--calendar-today);
+        box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }
 
+    /* Style för dagarna som redan varit */
     #date-div .calendar-week label.unavailable {
-        background-color: darkcyan;
+        color: var(--gray-inactive);
+        background-color: var(--brown);
+        box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }
     #date-div .calendar-week label.unavailable-out {
-        background-color: rgba(0, 139, 139, 0.445);
+        color: var(--gray-inactive);
+        background-color: var(--calendar-unavailable-out);
+        box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }
 
+    /*Style för den valda dagen*/
     #date-div input[type="radio"]:checked + label {
-        background-color: var(--dark-brown);
-        box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
+        display: block;
+        background-color: rgb(38, 161, 1);
+        color: white;
     }

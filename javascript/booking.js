@@ -197,7 +197,7 @@ function updateCalendar(difference=0) {
         
 
         // Lägger till veckan till diven där kalenderna skall vara
-        document.getElementById("date-div").appendChild(week);
+        document.getElementById("calendar-div").appendChild(week);
         
         // Ändar vilken månad och år det är vi visar upp dagarna för
         document.getElementById("current-month").innerHTML = months[month.firstDate.getMonth()] + " " + month.firstDate.getFullYear();
