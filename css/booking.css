@@ -75,8 +75,12 @@ input[type="radio"] {
     height: 100vh;
 }
 
+#booking-state {
+    height: 500px;
+}
+
     /* design för elementen som visar var vi är i boknings processen */
-    #booking_state label {
+    #booking-state label {
         padding: 1em;
         border-radius: 0.6em;
         background-color: var(--light-background);
@@ -160,16 +164,18 @@ input[type="radio"] {
         background-color: var(--brown);
         border-radius: 1.5em;
         text-align: center;
+        box-shadow: 0.1em 0.2em 0.4em var(--shadow);
+
     }
     #amount-div label:hover {
-        background-color: rgba(104, 52, 4, 0.788);
+        background-color: #683404c9;
     }
 
     /*  Vi stylar om lablen till en checked radio,
         fungerar eftersom alla lables ligger direkt efter
         sin input */
     #amount-div input[type="radio"]:checked + label {
-        background-color: rgba(255, 255, 255, 0.05);
+        background-color: #ffffff0d;
         box-shadow: inset 0.1em 0.2em 0.4em var(--shadow);
     }
 
@@ -230,7 +236,7 @@ input[type="radio"] {
         /* scale: 1.1; */
         /* box-shadow: inset 0 0 0 5px rgb(73, 56, 0); */
         color: white;
-        background-color: rgb(53, 185, 12);
+        background-color: #35b90c;
     }
 
     /* Style för de dagar som är i framtiden */
