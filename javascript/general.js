@@ -60,10 +60,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // För att visa navbaren i mobilläge när man trycker på menyn
     document.getElementById("navbar-menu").addEventListener("click", function(){
         if (navbarContent.style.display == "flex"){
+            // Gömmer navbar-content
             navbarContent.style.display = "none";
+            // Stylar tillbaka knappen
+            this.style.backgroundColor = "";
+            this.style.color = "";
         }
         else {
+            // Visar navbar-menyn
             navbarContent.style.display = "flex";
+            // Stylar om knappen så man ser vad som händer
+            this.style.backgroundColor = "transparent";
+            this.style.color = "white";
+            this.style.boxShadow = "inset 0px 0px 0px 2px white";
 
             // wholeNavbar.style.backgroundColor = "white";
         }

@@ -15,6 +15,7 @@
 
     --nav-selected: rgb(63, 110, 56);
     --nav-default: rgb(119, 153, 113);
+    --nav-main: rgba(255, 255, 255, 1);
 
     --calendar-unavailable-out: rgba(181, 78, 0, 0.15);
     --calendar-today: rgba(111, 221, 42, 0.5);
@@ -147,19 +148,19 @@ a, label, .clickable {
 
 /* Fade in on scroll animation */
 .reveal-on-scroll:not(.fade-right,.fade-left) {
-    transform: translateY(150px);
+    transform: translateY(10vw);
     opacity: 0;
     transition: 1s transform ease, 1s opacity ease;
 }
 
 .reveal-on-scroll.fade-right {
-    transform: translateX(150px);
+    transform: translateX(10vw);
     opacity: 0;
     transition: 1s transform ease, 1s opacity ease;
 }
 
 .reveal-on-scroll.fade-left {
-    transform: translateX(-150px);
+    transform: translateX(-10vw);
     opacity: 0;
     transition: 1s transform ease, 1s opacity ease;
 }
@@ -230,7 +231,7 @@ a, label, .clickable {
 
         #navbar #nav-content {
             display: none;
-            width: 70%;
+            width: 80%;
             max-width: 300px;
             /* padding: 0.5rem; */
             border-radius: 1.2em;
@@ -272,23 +273,24 @@ a, label, .clickable {
 
         #navbar p{
             display: block;
-            width: 70%;
+            width: 80%;
             max-width: 300px;
             text-align: center;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
-            box-shadow: inset 0px 0px 0px 3px white;
-            background-color: var(--nav-default);
-            /* border: 3px solid white; */
+            background-color: var(--nav-main);
+            color: black;
             border-radius: 10em;
             font-size: 1.2rem;
             transition: all 0.2s;
         }
 
         #navbar p:hover {
-            background-color: white;
-            color: black;
+            background-color: transparent;
+            color: white;
             border: 0px;
+            box-shadow: inset 0px 0px 0px 2px white;
+
         }
 
         
