@@ -54,28 +54,32 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // För att navbaren vid 
+    // Navbar på telefon //
     let wholeNavbar = document.getElementById("navbar");
     let navbarContent = document.getElementById("nav-content");
+
     // För att visa navbaren i mobilläge när man trycker på menyn
     document.getElementById("navbar-menu").addEventListener("click", function(){
         if (navbarContent.style.display == "flex"){
+            
             // Gömmer navbar-content
             navbarContent.style.display = "none";
+
             // Stylar tillbaka knappen
             this.style.backgroundColor = "";
             this.style.color = "";
             this.style.boxShadow = "";
         }
         else {
+            
             // Visar navbar-menyn
             navbarContent.style.display = "flex";
+            
             // Stylar om knappen så man ser vad som händer
             this.style.backgroundColor = "transparent";
             this.style.color = "var(--nav-main)";
             this.style.boxShadow = "inset 0px 0px 0px 2px var(--nav-main)";
 
-            // wholeNavbar.style.backgroundColor = "white";
         }
     })
 
