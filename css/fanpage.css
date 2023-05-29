@@ -1,6 +1,30 @@
-#navbar{
-    background-color: var(--brown);
+:root {
+    --nav-selected: rgb(63, 110, 56);
+    --nav-default: var(--brown);
+    --nav-main: var(--brown);
+    --nav-color-default: white;
+    --nav-color-selected: white;
+
+
 }
+
+
+#navbar{
+    background-color: var(--nav-main);
+}
+
+@media (max-width: 750px) {
+    #navbar {
+        background-color: transparent;
+    }
+
+        #navbar p {
+            background-color: var(--nav-main);
+            color: white;
+        }
+}
+
+
 body{
     background-color: rgb(119, 178, 104);
 }

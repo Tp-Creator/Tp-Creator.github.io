@@ -65,14 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
             // Stylar tillbaka knappen
             this.style.backgroundColor = "";
             this.style.color = "";
+            this.style.boxShadow = "";
         }
         else {
             // Visar navbar-menyn
             navbarContent.style.display = "flex";
             // Stylar om knappen så man ser vad som händer
             this.style.backgroundColor = "transparent";
-            this.style.color = "white";
-            this.style.boxShadow = "inset 0px 0px 0px 2px white";
+            this.style.color = "var(--nav-main)";
+            this.style.boxShadow = "inset 0px 0px 0px 2px var(--nav-main)";
 
             // wholeNavbar.style.backgroundColor = "white";
         }

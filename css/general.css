@@ -13,9 +13,15 @@
     --brown: #2C2418;
     --dark-brown: #262017;
 
-    --nav-selected: rgb(63, 110, 56);
-    --nav-default: rgb(119, 153, 113);
+    /* --nav-selected: rgb(63, 110, 56); */
+    --nav-selected: white;
+    /* --nav-default: rgb(119, 153, 113); */
+    --nav-default: var(--background);
     --nav-main: rgba(255, 255, 255, 1);
+    /* --nav-color-default: black; */
+    --nav-color-default: white;
+    /* --nav-color-selected: white; */
+    --nav-color-selected: black;
 
     --calendar-unavailable-out: rgba(181, 78, 0, 0.15);
     --calendar-today: rgba(111, 221, 42, 0.5);
@@ -237,32 +243,32 @@ a, label, .clickable {
             height: fit-content;
             flex-direction: column;
             background-color: var(--nav-default);
+            box-shadow: inset 0px 0px 0px 0.3px var(--nav-main);
         }
 
             #nav-content a {
                 margin: 0;
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
-                /* color: black; */
                 width: 100%;
                 text-align: center;
                 border-radius: 1.5em;
             }
 
             #nav-content a:not(.nav-active) {
-                color: black;
+                color: var(--nav-color-default);
                 background-image: none;
             }
 
             .nav-active {
                 background-image: none;
                 background-color: var(--nav-selected);
-                color: white;
+                color: var(--nav-color-selected);
             }
 
             #nav-content a:hover {
                 background-color: var(--nav-selected);
-                color: white;
+                color: var(--nav-color-selected);
             }
 
             #nav-content a:first-child {
@@ -277,19 +283,19 @@ a, label, .clickable {
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
             background-color: var(--nav-main);
-            color: black;
+            color: var(--nav-color-selected);
             border-radius: 10em;
             font-size: 1.2rem;
             transition: all 0.2s;
         }
 
-        #navbar p:hover {
+        /* #navbar p:hover {
             background-color: transparent;
-            color: white;
+            color: var(--nav-main);
             border: 0px;
-            box-shadow: inset 0px 0px 0px 2px white;
+            box-shadow: inset 0px 0px 0px 2px var(--nav-main);
 
-        }
+        } */
 
         
 
