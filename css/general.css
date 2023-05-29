@@ -222,7 +222,9 @@ a, label, .clickable {
                 background-size: 100% 0.1em;
             }
 
+/* Navbar för telefoner och enheter smalare än 750px */
 @media (max-width: 750px) {
+    /* diven som håller navbaren */
     #navbar {
         position:fixed;
         flex-direction: column-reverse;
@@ -231,10 +233,12 @@ a, label, .clickable {
         width: 100vw;
     } 
 
+    /* Vi ändrar nu allt i diven till static, för det är default */
     #navbar * {
         position: static;
     }
 
+        /* Själva länkarna och sånt i navbaren */
         #navbar #nav-content {
             display: none;
             width: 80%;
@@ -246,6 +250,7 @@ a, label, .clickable {
             box-shadow: inset 0px 0px 0px 0.3px var(--nav-main);
         }
 
+            /* varje specifik item i navbaren */
             #nav-content a {
                 margin: 0;
                 padding-top: 0.5rem;
@@ -255,26 +260,33 @@ a, label, .clickable {
                 border-radius: 1.5em;
             }
 
+            /* Alla items utom den som reperesenterar sidan vi är på just nu */
             #nav-content a:not(.nav-active) {
                 color: var(--nav-color-default);
+                /* för att tabort animerade hover effekten */
                 background-image: none;
             }
 
+            /* Den item som visar vilken sida vi är på just nu */
             .nav-active {
+                /* för att tabort animerade hover effekten */
                 background-image: none;
                 background-color: var(--nav-selected);
                 color: var(--nav-color-selected);
             }
 
+            /* När man hovrar över en av de items som finns i navbaren */
             #nav-content a:hover {
                 background-color: var(--nav-selected);
                 color: var(--nav-color-selected);
             }
-
+            
+            /* flyttar tar bort all margin från första itemen */
             #nav-content a:first-child {
                 margin: 0;
             }
 
+        /* Det som visas när navbaren inte är utvecklad */
         #navbar p{
             display: block;
             width: 80%;
@@ -289,6 +301,7 @@ a, label, .clickable {
             transition: all 0.2s;
         }
 
+        /* tog bort hover för att det inte ska bli konstigt på telefonen */
         /* #navbar p:hover {
             background-color: transparent;
             color: var(--nav-main);
@@ -323,7 +336,7 @@ a, label, .clickable {
 
     .hero-second{
         margin-left: 2rem;
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         margin-top: 1.8rem;
         margin-bottom: 25vh;
 
@@ -334,6 +347,46 @@ a, label, .clickable {
         margin-left: 2rem;
         animation: content-in 2s; 
     }
+
+@media (max-width: 700px) {
+    .hero-header {
+        text-align: center;
+        font-size: 12vw;
+    }
+
+    .hero-second {
+        font-size: 5vw;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+    .hero-content {
+        display: flex;
+        position: static;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20vh;
+        width: 100%;
+    }
+
+        .hero-second {
+            margin-left: 0;
+            margin-bottom: 15vh;
+        }        
+
+        .hero-action {
+            margin-left: 0;
+        }
+
+}
+
+@media (max-width: 400px) {
+    .hero-action {
+        font-size: 7vw;
+    }
+}
 
 
 /* Footer */
@@ -353,9 +406,11 @@ a, label, .clickable {
 
         #footer-content > div{
             margin-bottom: 10%;
+            width: 30%;
 
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
             #footer-content div h1{
@@ -369,6 +424,23 @@ a, label, .clickable {
             }
 
 
+@media (max-width:700px) {
+    #footer-content {
+        /* flex-wrap: wrap; */
+        /* justify-content: flex-start; */
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #footer-content > div {
+        width: fit-content;
+        max-width: 80%;
+    }
+
+    #footer-content > div:last-child {
+        margin-bottom: 50vh;
+    }
+}
 
 
 
