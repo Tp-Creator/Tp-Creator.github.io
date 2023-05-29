@@ -44,8 +44,29 @@ function updateNavOpacity(){
 // element som inte finns).
 document.addEventListener('DOMContentLoaded', function() {
     
+    // Saker som skall hända när man skrollar
     window.addEventListener("scroll", function(){
         fadeInElements();
-        updateNavOpacity();
+
+        // Lägger endast till bakgrund på navbaren när navbaren är "normal"
+        if (window.innerWidth > 750){
+            updateNavOpacity();
+        }
     });
+
+    // För att navbaren vid 
+    let wholeNavbar = document.getElementById("navbar");
+    let navbarContent = document.getElementById("nav-content");
+    // För att visa navbaren i mobilläge när man trycker på menyn
+    document.getElementById("navbar-menu").addEventListener("click", function(){
+        if (navbarContent.style.display == "flex"){
+            navbarContent.style.display = "none";
+        }
+        else {
+            navbarContent.style.display = "flex";
+
+            // wholeNavbar.style.backgroundColor = "white";
+        }
+    })
+
 });
