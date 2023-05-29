@@ -233,12 +233,10 @@ a, label, .clickable {
             display: none;
             width: 80%;
             max-width: 300px;
-            /* padding: 0.5rem; */
             border-radius: 1.2em;
             height: fit-content;
             flex-direction: column;
             background-color: var(--nav-default);
-            /* margin-bottom: calc(1.2rem + 1rem + 5vh); */
         }
 
             #nav-content a {
