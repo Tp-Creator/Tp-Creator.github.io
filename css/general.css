@@ -181,11 +181,13 @@ a, label, .clickable {
 /*************/
 
 
+
+
+
 /* Navbar */
 #navbar {
     display: flex;
     justify-content: center;
-    z-index: 11;
     user-select: none;
 }
 
@@ -198,6 +200,8 @@ a, label, .clickable {
         width: 100%;
         height: 2.5em;
         font-size: 1.2rem;
+        z-index: 11;
+
 
         display: flex;
         justify-content: flex-end;
@@ -228,11 +232,12 @@ a, label, .clickable {
 @media (max-width: 750px) {
     /* diven som håller navbaren */
     #navbar {
-        position:fixed;
+        position: fixed;
         flex-direction: column-reverse;
         align-items: center;
         bottom: 5vh;
         width: 100vw;
+        z-index: 11;
     } 
 
     /* Vi ändrar nu allt i diven till static, för det är default */

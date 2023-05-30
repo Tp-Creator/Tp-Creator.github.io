@@ -26,12 +26,12 @@ function fadeInElements(){
 // vilken höjd användaren scrollat till
 function updateNavOpacity(){
     // Hämtar navbaren
-    let navbar = document.getElementById('navbar');
+    let navbar = document.getElementById('nav-content');
 
     // Kollar om vi scrollat längre ned än vad heron är lång
     // (Skärmens höjd)
     // Och ändrar sedan background color till --background om vi är under Heron
-    if (window.scrollY < window.innerHeight) {
+    if (window.scrollY < window.innerHeight && window.innerWidth > 750) {
         navbar.style.backgroundColor = 'transparent';
     } else {
         navbar.style.backgroundColor = 'var(--background)';
@@ -43,20 +43,25 @@ function updateNavOpacity(){
 // ännu skapats är det bäst att vänta så att vi inte får att den letar efter
 // element som inte finns).
 document.addEventListener('DOMContentLoaded', function() {
+    // Navbar-content
+    let navbarContent = document.getElementById("nav-content");
+
+    // bla bla
+    window.addEventListener("resize", function() {
+        updateNavOpacity();
+        if (window.innerWidth > 750) {
+            navbarContent.style.display = "flex";
+        }
+        else {
+            navbarContent.style.display = "";
+        }
+    });
     
     // Saker som skall hända när man skrollar
     window.addEventListener("scroll", function(){
         fadeInElements();
-
-        // Lägger endast till bakgrund på navbaren när navbaren är "normal"
-        if (window.innerWidth > 750){
-            updateNavOpacity();
-        }
+        updateNavOpacity();
     });
-
-    // Navbar på telefon //
-    let wholeNavbar = document.getElementById("navbar");
-    let navbarContent = document.getElementById("nav-content");
 
     // För att visa navbaren i mobilläge när man trycker på menyn
     document.getElementById("navbar-menu").addEventListener("click", function(){

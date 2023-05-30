@@ -12,16 +12,22 @@
 }
 
     /* Placerar hero texten på rätt plats */
-    .hero-content{
+    .hero-content {
         text-align: center;
         width: 100%;
         left: 0;
     }
 
-input:disabled + label{
+
+input[type="time"] {
+    background-color: var(--background);
+    border: none;
+    font-size: 2rem;
+}
+input:disabled + label {
     cursor: url(../img/cursor/default.png) 1 8, default;
 }
-input + label{
+input + label {
     user-select: none;
 }
 
