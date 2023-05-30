@@ -153,6 +153,8 @@ a, label, .clickable {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
 }
 /* ************** */
 
@@ -574,9 +576,16 @@ a, label, .clickable {
     }
 }
 
-#jump-scare {
-    
+#hej {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/shared/erikmat.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#jump-scare:hover {
+#jump-scare:hover ~ #hej {
     animation: scare 5s;
 }
