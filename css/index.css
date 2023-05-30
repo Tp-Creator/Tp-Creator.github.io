@@ -156,8 +156,6 @@
     #about-text {
         font-size: 7vw;
     }
-
-
 }
 
 
@@ -182,22 +180,29 @@
 
 }   
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     #find-us-img-content {
         display: flex;
         flex-direction: column;
-        align-items: center
+        align-items: center;
+        /* width: 100%; */
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     #find-img-header {
-        font-size: 16vw;
+        margin-top: 10em;
+        font-size: 8vw;
+        word-spacing:9999px;
+        line-height: 1.5em;
     }
 
     #find-img-second {
-        font-size: 8vw;
-        margin: 0;
-        max-width: 80%;
+        font-size: 6vw;
+        /* margin: 0; */
+        /* max-width: 80%; */
+        width: fit-content;
         text-align: center;
     }
 
