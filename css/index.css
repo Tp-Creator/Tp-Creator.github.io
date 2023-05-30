@@ -13,9 +13,9 @@
 
 /* Small About  */
 #short-about {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
 }
 
 .about-content {
@@ -61,8 +61,15 @@
 @media (max-width: 950px) {
     
     #short-about {
-        position: relative;
+        /* position: relative; */
+        display: flex;
+        align-items: center;
 
+    }
+
+    .about-content {
+        position: relative;
+        width: 100%;
     }
 
         #short-about #img-placement {
@@ -80,6 +87,7 @@
     #about-text {
         position: absolute;
         top: 0;
+        z-index: 2;
     }
 
 }   
