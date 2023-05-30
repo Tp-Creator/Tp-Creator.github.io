@@ -566,26 +566,21 @@ a, label, .clickable {
 
 
 /* Jump scare */
-@keyframes jump-scare {
-    from {
-        display: fixed;
-        height: 100vh;
-    }
-    to {
-        height: 0;
-    }
-}
-
-#hej {
-    display: none;
+#jump-scare::before {
+    content: "";
+    z-index: 100;
     position: fixed;
-    width: 100%;
-    height: 100%;
+    bottom: 50vh;
+    right: 50vh;
+    height: 100vh;
     background-image: url(../img/shared/erikmat.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-#jump-scare:hover ~ #hej {
-    animation: scare 5s;
+#jump-scare:hover::before {
+    transition: top 0.05s ease, height 0.15s ease;
+    width: 100vw;
+    height: 0;
+    bottom: 0;
 }
