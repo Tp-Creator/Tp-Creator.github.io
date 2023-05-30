@@ -29,15 +29,6 @@
     --calendar-available-out: rgba(60, 92, 41, 0.2);
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-    #safari {
-        display: block;
-    }
-}
-#safari {
-    display: none;
-}
-
 /* Skapar font som vi kan använda */
 @font-face {
     font-family: tingeling;
