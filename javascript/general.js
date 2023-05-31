@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener("scroll", function(){
         fadeInElements();
         updateNavOpacity();
-    });
+    }, {passive: true});
 
     // För att visa navbaren i mobilläge när man trycker på menyn
     document.getElementById("navbar-menu").addEventListener("click", function(){

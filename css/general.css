@@ -35,6 +35,7 @@
 @font-face {
     font-family: tingeling;
     src: url(../fonts/Tinker_Bell.ttf);
+    font-display: swap; /* För att texten ska synas på sidan, innan teckensnittet läses in */
 }
 
 /* Basic Style */
@@ -573,7 +574,7 @@ a, label, .clickable {
     bottom: 50vh;
     right: 50vh;
     height: 100vh;
-    background-image: url(../img/shared/erikmat.png);
+    background-image: url(../img/shared/erikmat.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
